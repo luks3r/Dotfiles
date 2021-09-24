@@ -1,4 +1,4 @@
-# Default {{{
+# Common {{{
 
 # Core Utils
 alias find=fd
@@ -12,6 +12,10 @@ alias top=ytop
 
 # Package Manager
 alias yay=paru
+
+# Fetch
+alias neofetch=freshfetch
+alias fetch=freshfetch
 
 # }}}
 
