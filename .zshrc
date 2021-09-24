@@ -3,6 +3,8 @@
 
 # Zinit {{{
 
+# Initialize {{{
+
 # Install Zinit (if needed)
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
   print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
@@ -27,6 +29,8 @@ zinit light-mode for \
   zinit-zsh/z-a-as-monitor \
   zinit-zsh/z-a-patch-dl \
   zinit-zsh/z-a-bin-gem-node
+
+# }}}
 
 # Plugins {{{
 
