@@ -8,9 +8,7 @@
 # https://github.com/baskerville/sxhkd
 # https://github.com/baskerville/bspwm
 
-##################
-# WM INDEPENDENT #
-##################
+# Common {{{
 
 # reload sxhkd config
 super + Escape
@@ -65,11 +63,11 @@ XF86Search
 XF86Favorites
     brave
 
-#########
-# BSPWM #
-#########
+# }}}
 
-### BASIC ###
+# BSPWM {{{
+
+### Basic {{{
 
 # quit/restart bspwm
 super + shift + {q,r}
@@ -91,7 +89,9 @@ super + y
 super + g
 	bspc node -s biggest
 
-### STATE/FLAGS ###
+# }}}
+
+### State | Flags {{{
 
 # set the window state
 super + {t,shift + t,s,f}
@@ -101,7 +101,9 @@ super + {t,shift + t,s,f}
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-### FOCUS/SWAP ###
+# }}}
+
+### Focus | Swap {{{
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -133,7 +135,9 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} {1-9,10}
 
-### PRESELECT ###
+# }}}
+
+### Preselect {{{
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -150,8 +154,9 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+# }}}
 
-### MOVE/RESIZE ###
+### Move | Resize {{{
 
 # Smart resizing
 super + ctrl + alt + {Left,Down,Up,Right}
@@ -163,38 +168,42 @@ super + ctrl + alt + {Left,Down,Up,Right}
     } \
     bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
 
-################
-# APPLICATIONS #
-################
+# }}}
 
-# terminal emulator
+# Applications {{{
+
+# Terminal Emulator
 super + Return
-	alacritty
+	kitty
 
-# launch pcmanfm
+# File Manager
 super + alt + f
 	thunar
 
-# launch firefox
+# Browser
 super + alt + b
 	brave
 
-# launch nvim
+# NVim
 super + alt + t
-	alacritty -e nvim
+	kitty -e nvim
 
-# launch vscode
+# VSCode
 super + alt + c
 	code
+# }}}
 
-#########
-# DMENU #
-#########
+# Runner {{{
 
-# run program launcher
+# Dmenu
 super + shift + Return
     dmenu_run --nb "#363944" --nf "#e2e2e3" --sb "#9ed072" --sf "#363944" --fon "Roboto:size=10" --font "Font Awesome 5 Free:style=Solid:size=8" --render_minheight 22
 t
 
+# Rofi
 super + {r,w,e}
     rofi -show {drun,window,run}
+
+# }}}
+
+# }}}
