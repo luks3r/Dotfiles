@@ -56,5 +56,6 @@ zinit light starship/starship
 # Environment {{{
 
 source ~/.zshenv
+source ~/.aliases
 
 # }}}
