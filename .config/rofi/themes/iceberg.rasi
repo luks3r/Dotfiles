@@ -1,0 +1,126 @@
+/*******************************************************************************
+ * ROFI VERTICAL THEME USING THE color COLOR PALETTE 
+ * User                 : ulises-jeremias               
+ * Theme Repo           : https://github.com/ulises-jeremias/rofi-themes
+ * color Project Repo    : https://github.com/arcticicestudio/color
+ *******************************************************************************/
+
+* {
+    // special
+    foreground:   #c6c8d1;
+    background:   #161821;
+
+    // black
+    color0:       #161821;
+    color8:       #6b7089;
+
+    // red
+    color1:       #e27878;
+    color9:       #e98989;
+
+    // green
+    color2:       #b4be82;
+    color10:      #c0ca8e;
+
+    // yellow
+    color3:       #e2a478;
+    color11:      #e9b189;
+
+    // blue
+    color4:       #84a0c6;
+    color12:      #91acd1;
+
+    // magenta
+    color5:       #a093c7;
+    color13:      #ada0d3;
+
+    // cyan
+    color6:       #89b8c2;
+    color14:      #95c4ce;
+
+    // white
+    color7:       #c6c8d1;
+    color15:      #d2d4de;
+
+    background-color    : @background;
+    text-color          : @foreground;
+
+    margin              : 0;
+}
+#window {
+    location            : center;
+    y-offset            : -200;
+    width               : 480;
+    background-color    : @color0;
+    border              : 2;
+    border-color        : @color8;
+}
+#mainbox {
+    spacing             : 0;
+}
+#inputbar {
+    background-color    : @color0;
+    spacing             : 0;
+}
+#prompt {
+    padding             : 12 12 0;
+    background-color    : @color0;
+    vertical-align      : 0;
+}
+#entry {
+    padding             : 8 0;
+    background-color    : @color0;
+}
+#case-indicator {
+    padding             : 8;
+    background-color    : @color0;
+}
+#message {
+    padding             : 0;
+}
+#textbox {
+    padding             : 8;
+    background-color    : @color8;
+    text-color          : @color0;
+}
+#listview {
+    lines               : 8;
+    columns             : 1;
+    fixed-height        : false;
+    spacing             : 0;
+}
+#element {
+    padding             : 8;
+    spacing             : 8;
+}
+#element normal normal {
+    text-color          : @color4;
+}
+#element normal urgent {
+    text-color          : @color13;
+}
+#element normal active {
+    text-color          : @color8;
+}
+#element selected normal {
+    background-color    : @color8;
+    text-color          : @color0;
+}
+#element selected urgent {
+    background-color    : @color13;
+    text-color          : @color0;
+}
+#element selected active {
+    background-color    : @color8;
+    text-color          : @color0;
+}
+#element-icon {
+    size                : 0.8em;
+    background-color    : transparent;
+}
+#element-text {
+    background-color    : transparent;
+}
+#mode-switcher {
+    padding             : 0;
+}
