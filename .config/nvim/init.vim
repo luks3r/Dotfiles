@@ -73,12 +73,21 @@ call dein#add('ntpeters/vim-better-whitespace')
 
 " }}}
 
+" Style {{{
+
+call dein#add('cocopon/iceberg.vim')
+call dein#add('gkeep/iceberg-dark')
+
+"
+
 call dein#end()
 
 " Install not installed plugins
 if dein#check_install()
  call dein#install()
 endif
+
+" }}}
 
 " }}}
 
@@ -113,10 +122,10 @@ set fillchars=fold:= " Whitespace here
 
 " }}}2
 
-" Theme {{{
+" Style {{{
 
-let g:airline_theme='molokai'
+colorscheme iceberg
+let g:airline_theme='icebergDark'
 
 " }}}
 
-" }}}
