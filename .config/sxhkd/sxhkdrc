@@ -1,6 +1,6 @@
 # ██      ███████  Lukser (Sergei Lukaushkin)
 # ██      ██       Shy. Delicate. Powerful.
-# ██      ███████ 
+# ██      ███████
 # ██           ██  https://github.com/luks3r
 # ███████ ███████  https://gitlab.com/lukser
 #
@@ -25,7 +25,7 @@ XF86Audio{Lower,Raise}Volume
     xbacklight {-10,-1,=5,+10,+1,=100}
 
 {_,shift +,ctrl +}Print
-    scrot {_,-s,-u} 'Lukser_%Y-%m-%d_%H-%M-%S.png' -e 'mv $f ~/Pictures; feh ~/Pictures/$f'
+    scrot {_,-s,-u} 'Screendhot_%Y-%m-%d_%H-%M-%S.png' -e 'mv $f ~/Pictures; feh ~/Pictures/$f'
 
 XF86Audio{Prev,Next}
     playerctl --player spotifyd {previous,next}
