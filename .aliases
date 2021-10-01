@@ -1,14 +1,37 @@
-# Common {{{
+# vim:fileencoding=utf-8:foldmethod=marker
 
-# Core Utils
+# Custom Defaults {{{
+
+# Search & Parse {{{
+
+# fd
 alias find=fd
-alias ls=exa
-alias cat=bat
-alias ps=procs
-alias sed=sd
-alias du=dust
+
+# ripgrep
 alias grep=rg
+
+# sd
+alias sed=sd
+
+# }}}
+
+# Utils {{{
+
+# List
+alias exa="exa --icons --color=always"
+alias l="exa"
+alias ls="exa -l"
+alias la="exa -a"
+alias lla="exa -la"
+
+# Useful Stuff
+alias ps=procs
+alias cat=bat
 alias top=ytop
+
+# Tree
+alias du=dust
+alias tree=dust
 
 # Package Manager
 alias yay=paru
@@ -16,6 +39,8 @@ alias yay=paru
 # Fetch
 alias neofetch=freshfetch
 alias fetch=freshfetch
+
+# }}}
 
 # }}}
 
