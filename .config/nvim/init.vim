@@ -1,23 +1,62 @@
 " vim:fileencoding=utf-8:ft=conf:foldmethod=marker
 
-" Pre-setup {{{
+" Basic {{{
+
+" Basic syntax highlighting
+syntax enable
+
+" Detect different filetypes
+filetype on
+
+" Smart tab
+set smarttab
+
+" Auto indent
+set autoindent
+
+" Numbers and relative number
+set number relativenumber
+
+" Backspace through anything
+set backspace=indent,eol,start
+
+" Set clipboard to system clipboard to allow proper copying and pasting
+set clipboard=unnamedplus
+
+" No compatible with vi
 if &compatible
-  set nocompatible " Be iMproved
+  set nocompatible
 endif
 
-set runtimepath+=/usr/share/vim/vimfiles
+" Switch between case sensitive and insensitive automatically during search
+set smartcase
+
+" Automatically change directory
+set autochdir
+
+" Completion in command mode
+set wildmode=longest,list,full
+
+" Set splits to open below and on the right side
+set splitbelow splitright
+
 " }}}
 
 " Plugins {{{
-call dein#begin(expand('~/.cache/dein'))
 
 " Init {{{
+
+set runtimepath+=/usr/share/vim/vimfiles
+
+call dein#begin(expand('~/.cache/dein'))
+
 " Let dein manage dein
 call dein#add(expand('~/.cache/dein'))
 if !has('nvim')
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
+
 " }}}
 
 " Common {{{
@@ -64,21 +103,34 @@ call dein#add('dense-analysis/ale')
 
 " Support {{{
 
+" Rainbow CSV
 call dein#add('mechatroner/rainbow_csv')
+
+" Rainbow brackets
 call dein#add('luochen1990/rainbow')
+
+" Git helper
 call dein#add('tpope/vim-fugitive')
+
+" Surrond helpers
 call dein#add('tpope/vim-surround')
+
+" Fuzzy search
 call dein#add('ctrlpvim/ctrlp.vim')
+
+" Whitespace hightligth & strip
 call dein#add('ntpeters/vim-better-whitespace')
 
 " }}}
 
 " Style {{{
 
+" Iceberg theme
 call dein#add('cocopon/iceberg.vim')
-call dein#add('gkeep/iceberg-dark')
 
-"
+" }}}
+
+" Post-install {{{
 
 call dein#end()
 
@@ -93,17 +145,6 @@ endif
 
 " Config {{{
 
-" Basic {{{
-
-set number
-set relativenumber
-set ts=2 sw=2 et
-filetype plugin indent on
-syntax enable
-
-
-" }}}
-
 " Plugin {{{
 
 let g:better_whitespace_enabled=1
@@ -116,16 +157,17 @@ let g:syntastic_check_on_wq = 0
 
 " }}}
 
-" Folding {{{2
-
-set fillchars=fold:= " Whitespace here
-
-" }}}2
-
 " Style {{{
 
+" Support for 256 colors
+set t_Co=256
+
+" Use dark background
+set background=dark
+
+" Set color scheme
 colorscheme iceberg
-let g:airline_theme='icebergDark'
 
 " }}}
 
+" }}}
