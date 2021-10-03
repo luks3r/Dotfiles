@@ -34,7 +34,7 @@ XF86Audio{Stop,Play}
     playerctl --player spotifyd {stop,play-pause}
 
 XF86AudioMicMute
-    pactl set-source-mute 0 toggle
+    pactl set-source-mute 1 toggle
 
 XF86Display
     bspc desktop -l next
